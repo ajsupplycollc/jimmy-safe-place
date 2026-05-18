@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Safe Place of South Florida | Sober Living &amp; Pet Rehabilitation</title>
+    <meta name="description" content="Jimmy Safe Place of South Florida offers a unique sober living experience that pairs recovery residents with rescued animals. A safe haven for healing — for people and pets alike.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-blue: #0f2b4c;
+            --navy: #163a5f;
+            --teal: #1a7a7a;
+            --teal-light: #2a9d8f;
+            --teal-pale: #e8f5f3;
+            --warm-gold: #d4a44c;
+            --warm-gold-light: #f0d9a8;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-body: #3d3d5c;
+            --text-muted: #6b6b8a;
+            --border-light: #e2e0dc;
+            --shadow-sm: 0 2px 8px rgba(15, 43, 76, 0.06);
+            --shadow-md: 0 4px 20px rgba(15, 43, 76, 0.1);
+            --shadow-lg: 0 8px 40px rgba(15, 43, 76, 0.14);
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-body);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--deep-blue);
+            line-height: 1.25;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(226, 224, 220, 0.6);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .nav-logo {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--teal), var(--deep-blue));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .nav-logo::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2.5px solid var(--white);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .nav-logo::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--warm-gold);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .nav-brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .nav-brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--deep-blue);
+        }
+
+        .nav-brand-sub {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--teal);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-body);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+            background: var(--teal-pale);
+        }
+
+        .nav-links .nav-cta {
+            background: var(--deep-blue);
+            color: var(--white);
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 8px;
+            margin-left: 8px;
+        }
+
+        .nav-links .nav-cta:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--deep-blue);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(160deg, var(--deep-blue) 0%, #0d3461 35%, var(--navy) 60%, #1a5a5a 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 80%, rgba(26, 122, 122, 0.3) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 80% 20%, rgba(212, 164, 76, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Subtle geometric shapes for visual depth */
+        .hero-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .hero-shapes .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.04;
+            background: var(--white);
+        }
+
+        .hero-shapes .shape-1 {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            right: -100px;
+        }
+
+        .hero-shapes .shape-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: -80px;
+            opacity: 0.03;
+        }
+
+        .hero-shapes .shape-3 {
+            width: 200px;
+            height: 200px;
+            top: 40%;
+            right: 15%;
+            opacity: 0.05;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 100px;
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: var(--warm-gold-light);
+            margin-bottom: 28px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--teal-light);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.4); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: var(--warm-gold-light);
+        }
+
+        .hero-desc {
+            font-size: 1.12rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 40px;
+            max-width: 520px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 16px 32px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+        }
+
+        .btn-primary {
+            background: var(--warm-gold);
+            color: var(--deep-blue);
+        }
+
+        .btn-primary:hover {
+            background: #c0963f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212, 164, 76, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Hero visual — abstract "safe place" illustration */
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-illustration {
+            width: 100%;
+            max-width: 460px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .hero-illustration .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-illustration .ring-1 {
+            inset: 0;
+            animation: rotate-slow 60s linear infinite;
+        }
+
+        .hero-illustration .ring-2 {
+            inset: 15%;
+            border-color: rgba(42, 157, 143, 0.15);
+            animation: rotate-slow 45s linear infinite reverse;
+        }
+
+        .hero-illustration .ring-3 {
+            inset: 30%;
+            border-color: rgba(212, 164, 76, 0.12);
+            animation: rotate-slow 30s linear infinite;
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-illustration .center-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(42, 157, 143, 0.25), rgba(212, 164, 76, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-illustration .center-icon svg {
+            width: 52px;
+            height: 52px;
+            fill: none;
+            stroke: var(--white);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Orbiting nodes */
+        .hero-illustration .node {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-illustration .node svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.65);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hero-illustration .node-1 { top: 8%; left: 50%; transform: translateX(-50%); }
+        .hero-illustration .node-2 { top: 50%; right: 4%; transform: translateY(-50%); }
+        .hero-illustration .node-3 { bottom: 8%; left: 50%; transform: translateX(-50%); }
+        .hero-illustration .node-4 { top: 50%; left: 4%; transform: translateY(-50%); }
+
+        /* Stats bar at bottom of hero */
+        .hero-stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            z-index: 3;
+        }
+
+        .hero-stats-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--warm-gold-light);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 64px;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--teal);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .accent-line {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--warm-gold));
+            border-radius: 4px;
+            margin: 20px auto 0;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-card-stack {
+            display: grid;
+            gap: 20px;
+        }
+
+        .about-feature-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .about-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-feature-card .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .about-feature-card .card-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .about-feature-card .card-icon.recovery {
+            background: linear-gradient(135deg, #e8f5f3, #d0ece8);
+        }
+
+        .about-feature-card .card-icon.recovery svg {
+            stroke: var(--teal);
+        }
+
+        .about-feature-card .card-icon.pets {
+            background: linear-gradient(135deg, #fef4e3, #fce9c5);
+        }
+
+        .about-feature-card .card-icon.pets svg {
+            stroke: var(--warm-gold);
+        }
+
+        .about-feature-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
+        .about-feature-card p {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+        }
+
+        .about-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: 24px;
+        }
+
+        .about-text .lead {
+            font-size: 1.1rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: var(--text-body);
+        }
+
+        .about-highlight {
+            background: linear-gradient(135deg, var(--teal-pale), #f0f7f6);
+            border-left: 4px solid var(--teal);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+
+        .about-highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: var(--deep-blue);
+            font-size: 0.95rem;
+        }
+
+        /* ===== SERVICES/PROGRAMS ===== */
+        .programs {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .programs::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .program-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            border: 1px solid var(--border-light);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--teal-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+        }
+
+        .program-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .program-card .card-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: rgba(15, 43, 76, 0.06);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .program-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--teal-pale), #d4f0ec);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .program-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: var(--teal);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .program-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+        }
+
+        .program-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .program-card ul {
+            list-style: none;
+            margin-top: 18px;
+        }
+
+        .program-card ul li {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            padding: 6px 0;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .program-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--teal-light);
+            opacity: 0.6;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why {
+            background: var(--deep-blue);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 50% 50% at 10% 90%, rgba(26, 122, 122, 0.2) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 90% 10%, rgba(212, 164, 76, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .why .section-header {
+            position: relative;
+            z-index: 2;
+        }
+
+        .why .section-label {
+            color: var(--warm-gold-light);
+        }
+
+        .why .section-title {
+            color: var(--white);
+        }
+
+        .why .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .why-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .why-card-icon.farr { background: linear-gradient(135deg, rgba(42, 157, 143, 0.2), rgba(42, 157, 143, 0.1)); }
+        .why-card-icon.pet { background: linear-gradient(135deg, rgba(212, 164, 76, 0.2), rgba(212, 164, 76, 0.1)); }
+        .why-card-icon.community { background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06)); }
+        .why-card-icon.safe { background: linear-gradient(135deg, rgba(42, 157, 143, 0.2), rgba(212, 164, 76, 0.1)); }
+
+        .why-card-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .why-card-icon.farr svg { stroke: var(--teal-light); }
+        .why-card-icon.pet svg { stroke: var(--warm-gold); }
+        .why-card-icon.community svg { stroke: rgba(255, 255, 255, 0.75); }
+        .why-card-icon.safe svg { stroke: var(--teal-light); }
+
+        .why-card h3 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* FARR banner */
+        .farr-banner {
+            margin-top: 48px;
+            background: linear-gradient(135deg, rgba(42, 157, 143, 0.15), rgba(212, 164, 76, 0.1));
+            border: 1px solid rgba(42, 157, 143, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .farr-badge {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .farr-badge-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--white);
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .farr-content h3 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .farr-content p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            font-size: 1.02rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--teal-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: var(--teal);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact-item-text {
+            padding-top: 2px;
+        }
+
+        .contact-item-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-item-value {
+            font-size: 1rem;
+            color: var(--deep-blue);
+            font-weight: 500;
+        }
+
+        .contact-item-value a {
+            color: var(--teal);
+        }
+
+        .contact-item-value a:hover {
+            color: var(--deep-blue);
+        }
+
+        /* Contact form */
+        .contact-form-wrapper {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border-light);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper > p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid var(--border-light);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.93rem;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--teal);
+            box-shadow: 0 0 0 4px rgba(26, 122, 122, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 16px 32px;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            background: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--deep-blue);
+            color: rgba(255, 255, 255, 0.5);
+            padding: 60px 0 32px;
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .nav-brand {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand .nav-brand-name {
+            color: var(--white);
+        }
+
+        .footer-brand .nav-brand-sub {
+            color: var(--teal-light);
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.45);
+            max-width: 340px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--teal-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.82rem;
+        }
+
+        .footer-nonprofit {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-nonprofit span {
+            color: var(--teal-light);
+            font-weight: 500;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 110px;
+            }
+
+            .hero-desc { margin-left: auto; margin-right: auto; }
+
+            .hero-actions { justify-content: center; }
+
+            .hero-visual { display: none; }
+
+            .hero-stats-inner {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+
+            .farr-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px 28px;
+                max-width: 520px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                padding: 20px 24px;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
+                gap: 4px;
+            }
+
+            .nav-links.active a {
+                padding: 14px 16px;
+                width: 100%;
+            }
+
+            .nav-links .nav-cta {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 8px;
+            }
+
+            .nav-toggle { display: flex; }
+
+            .section { padding: 72px 0; }
+
+            .hero h1 { font-size: 2.2rem; }
+
+            .hero-stats-inner {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 20px 16px;
+            }
+
+            .stat-number { font-size: 1.3rem; }
+
+            .form-row { grid-template-columns: 1fr; }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-badge { font-size: 0.72rem; padding: 6px 14px; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero-desc { font-size: 1rem; }
+            .btn { padding: 14px 24px; font-size: 0.9rem; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .contact-form-wrapper { padding: 28px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <div class="nav-logo"></div>
+                <div class="nav-brand-text">
+                    <span class="nav-brand-name">Jimmy Safe Place</span>
+                    <span class="nav-brand-sub">of South Florida</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Get Help Now</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">South Florida Recovery Residence</div>
+                <h1>
+                    A Safe Haven for
+                    <span>Healing Together</span>
+                </h1>
+                <p class="hero-desc">
+                    Jimmy Safe Place of South Florida offers a sober living experience unlike any other. We pair residents in recovery with rescued animals, creating a community of mutual healing where everyone gets a second chance.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        Reach Out Today
+                    </a>
+                    <a href="#about" class="btn btn-outline">Learn Our Approach</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-illustration">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <div class="center-icon">
+                        <!-- Home/heart icon -->
+                        <svg viewBox="0 0 48 48">
+                            <path d="M8 22L24 8l16 14v18a2 2 0 01-2 2H10a2 2 0 01-2-2V22z"/>
+                            <path d="M24 28c2.5-2.5 5-4 5-6.5a3.5 3.5 0 00-5-3.15 3.5 3.5 0 00-5 3.15c0 2.5 2.5 4 5 6.5z"/>
+                        </svg>
+                    </div>
+                    <!-- Node: People -->
+                    <div class="node node-1">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <!-- Node: Heart -->
+                    <div class="node node-2">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <!-- Node: Shield -->
+                    <div class="node node-3">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <!-- Node: Paw (custom) -->
+                    <div class="node node-4">
+                        <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="5" cy="14" r="2"/><circle cx="19" cy="14" r="2"/><path d="M12 22c-2 0-6-4-6-7a3 3 0 013-3h6a3 3 0 013 3c0 3-4 7-6 7z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stats-inner">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Supportive Environment</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">FARR</div>
+                    <div class="stat-label">Accreditation Pathway</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Dual</div>
+                    <div class="stat-label">Human &amp; Pet Recovery</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">501(c)(3)</div>
+                    <div class="stat-label">Nonprofit Connected</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-card-stack">
+                        <div class="about-feature-card">
+                            <div class="card-icon recovery">
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
+                            <h4>Sober Living Community</h4>
+                            <p>A structured, substance-free residence providing stability and peer support for individuals committed to long-term recovery. Every resident is part of a community that holds each other accountable.</p>
+                        </div>
+                        <div class="about-feature-card">
+                            <div class="card-icon pets">
+                                <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="8" r="2.2"/><circle cx="5" cy="14" r="2.2"/><circle cx="19" cy="14" r="2.2"/><path d="M12 22c-2 0-6-4-6-7a3 3 0 013-3h6a3 3 0 013 3c0 3-4 7-6 7z"/></svg>
+                            </div>
+                            <h4>Pet Rehabilitation Program</h4>
+                            <p>Rescued animals are paired with residents, creating a powerful bond of responsibility and unconditional love. As residents care for their animals, both heal together in ways traditional programs cannot replicate.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-label">Our Story</div>
+                    <h2>Two Kinds of Rescue.<br>One Safe Place.</h2>
+                    <p class="lead">Recovery is more than sobriety. It is about rediscovering purpose, building trust, and learning to care for something beyond yourself.</p>
+                    <p>Jimmy Safe Place of South Florida was founded on a simple but powerful belief: healing happens in relationship. When a person in recovery cares for a rescued animal, something remarkable takes place. Responsibility becomes routine. Routine becomes stability. And stability becomes a new life.</p>
+                    <p>Our model pairs sober living residents with animals from shelters and rescue organizations. Residents participate in daily animal care as part of their recovery program, gaining structure, emotional connection, and a renewed sense of purpose.</p>
+                    <div class="about-highlight">
+                        <p>Connected to <strong>Positive Recovery</strong>, our 501(c)(3) nonprofit organization, we are building a network of recovery residences across South Florida, starting with our first home in Broward County.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="section programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Services &amp; Programs</div>
+                <h2 class="section-title">Built Around What Works</h2>
+                <p class="section-subtitle">Our programs integrate evidence-based recovery practices with animal-assisted support, creating a holistic path toward long-term sobriety and personal growth.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="card-num">01</div>
+                    <h3>Structured Sober Living</h3>
+                    <p>A safe, substance-free residential environment with house guidelines, curfews, and accountability measures designed to support your recovery journey.</p>
+                    <ul>
+                        <li>Drug and alcohol-free residence</li>
+                        <li>House meetings and peer support</li>
+                        <li>Random testing and accountability</li>
+                        <li>Life skills development</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="8" r="2.2"/><circle cx="5" cy="14" r="2.2"/><circle cx="19" cy="14" r="2.2"/><path d="M12 22c-2 0-6-4-6-7a3 3 0 013-3h6a3 3 0 013 3c0 3-4 7-6 7z"/></svg>
+                    </div>
+                    <div class="card-num">02</div>
+                    <h3>Animal-Assisted Recovery</h3>
+                    <p>Our signature program pairs each resident with a rescued animal. Daily caregiving builds routine, empathy, and emotional regulation through genuine connection.</p>
+                    <ul>
+                        <li>One-on-one animal pairing</li>
+                        <li>Daily feeding and care routines</li>
+                        <li>Veterinary education workshops</li>
+                        <li>Adoption pathway for animals</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="card-num">03</div>
+                    <h3>Recovery Support Services</h3>
+                    <p>Beyond housing, we connect residents with the resources they need to rebuild every part of their lives, from employment to emotional wellbeing.</p>
+                    <ul>
+                        <li>Recovery meeting coordination</li>
+                        <li>Employment readiness support</li>
+                        <li>Peer mentorship program</li>
+                        <li>Community reintegration planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why" id="why">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Jimmy Safe Place</div>
+                <h2 class="section-title">Recovery That Goes Beyond the Ordinary</h2>
+                <p class="section-subtitle">We are not just another halfway house. Our approach is built on the science of connection, the discipline of structure, and the healing power of caring for another living being.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-icon farr">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <h3>FARR Accreditation Pathway</h3>
+                    <p>We are actively pursuing accreditation through the Florida Association of Recovery Residences, ensuring our facility meets the highest standards for safety, ethics, and quality of care in sober living.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon pet">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <h3>The Pet Therapy Difference</h3>
+                    <p>Research consistently shows that animal interaction reduces anxiety, lowers cortisol levels, and increases oxytocin. Our residents experience these benefits daily through hands-on animal care and companionship.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon community">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>Real Community, Real Support</h3>
+                    <p>Our residents are not just housemates. They share responsibility, support each other through challenges, and build the kind of genuine relationships that sustain long-term recovery.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon safe">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M12 17c1.5-1.5 3-2.5 3-4a2 2 0 00-3-1.73A2 2 0 009 13c0 1.5 1.5 2.5 3 4z"/></svg>
+                    </div>
+                    <h3>A True Safe Haven</h3>
+                    <p>Jimmy Safe Place is exactly what the name says. A place where people and animals both find safety, structure, and the chance to start over. No judgment. Just support and a path forward.</p>
+                </div>
+            </div>
+
+            <div class="farr-banner">
+                <div class="farr-badge">
+                    <div class="farr-badge-text">FARR<br>Certified</div>
+                </div>
+                <div class="farr-content">
+                    <h3>Committed to the Highest Standards</h3>
+                    <p>The Florida Association of Recovery Residences (FARR) is the gold standard for sober living facilities in Florida. Our pursuit of FARR accreditation means that every aspect of our operations, from house management to resident safety, is held to rigorous, independently verified standards. Your loved ones deserve nothing less.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label">Get in Touch</div>
+                    <h2>Take the First Step Toward a New Beginning</h2>
+                    <p>Whether you are seeking help for yourself or a loved one, we are here to answer your questions and walk you through what life at Jimmy Safe Place looks like. No pressure. Just a conversation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-value">Call Us: (XXX) XXX-XXXX</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value"><a href="mailto:jamesgutches@gmail.com">jamesgutches@gmail.com</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <div class="contact-item-label">Address</div>
+                                <div class="contact-item-value">4935 NW 180 Terrace<br>Miami, FL 33055</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <p>Fill out the form below and someone from our team will reach out within 24 hours.</p>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry">I Am Reaching Out For</label>
+                            <select id="inquiry" name="inquiry">
+                                <option value="" disabled selected>Select one...</option>
+                                <option value="self">Myself</option>
+                                <option value="loved-one">A Loved One</option>
+                                <option value="professional">Professional Referral</option>
+                                <option value="volunteer">Volunteering / Partnership</option>
+                                <option value="other">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            Send Message
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#" class="nav-brand">
+                        <div class="nav-logo"></div>
+                        <div class="nav-brand-text">
+                            <span class="nav-brand-name">Jimmy Safe Place</span>
+                            <span class="nav-brand-sub">of South Florida</span>
+                        </div>
+                    </a>
+                    <p>A sober living community where people and rescued animals heal together. Every resident gets structure. Every animal gets a home. Everyone gets a second chance.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#why">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.farronline.org" target="_blank" rel="noopener">FARR - Florida Recovery Residences</a></li>
+                        <li><a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener">SAMHSA Helpline</a></li>
+                        <li><a href="tel:18006624357">National Crisis Line: 1-800-662-4357</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jimmy Safe Place of South Florida. All rights reserved.</p>
+                <div class="footer-nonprofit">
+                    A program connected to <span>Positive Recovery</span>, a 501(c)(3) nonprofit organization
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const spans = navToggle.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const spans = navToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission handler (visual only)
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Message Sent';
+            btn.style.background = '#1a7a7a';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                e.target.reset();
+            }, 3000);
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Animate cards and sections
+        document.querySelectorAll('.program-card, .why-card, .about-feature-card, .farr-banner, .contact-form-wrapper').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
